@@ -1,0 +1,337 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ecebeb;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.title-app{
+  font-family: 'Oswald', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.title-app:hover {
+  color: #f25353 !important;
+}
+.title-app:hover >span {
+  color: #171718 !important;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.fav-component{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 4px;
+  margin-top: 26px;
+
+  transform: translateX(15px);
+  border-radius: 8px;
+  z-index: 100;
+  background-color: rgba(179, 171, 171, 0.368);
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.fav-component:hover{
+
+  background-color: rgb(179, 171, 171, 0.768);
+ 
+}
+
+.fav-component:hover img{
+
+  filter: invert(92%) sepia(39%) saturate(633%) hue-rotate(349deg) brightness(104%) contrast(106%);
+  
+ 
+}
+
+.fav-component  img{
+  height: 24px;
+  width: 24px;
+  margin: 4px;
+  
+  object-fit: cover;
+}
+.star-fav{
+  background-color: rgb(179, 171, 171, 0.768);
+  transition: 0.3s ease-in;
+}
+
+.star-fav:hover{
+  
+}
+
+
+.star-fav img{
+  filter: invert(92%) sepia(39%) saturate(633%) hue-rotate(349deg) brightness(104%) contrast(106%);
+  transition: 0.3s ease;
+}
+
+.star-fav:hover img{
+  filter: invert(14%) sepia(99%) saturate(3280%) hue-rotate(355deg) brightness(104%) contrast(102%) !important;
+}
+
+
+.hero-card-info{
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+.hero-card-info:hover {
+  box-shadow: 0px 1px 5px #969ee7 !important;
+  
+}
+
+/* .navbar-menu{
+  transform: scaleY(-100px);
+  transition: 0.3s ease;
+  opacity: 0 ;
+}
+
+.navbar-menu,.is-active{
+  transform: scaleY(100px) !important;
+  opacity: 1 !important;
+} */
+      
+
+.heroe-detail-infor{
+  flex-direction: row;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+@media (max-width:1024px) {
+  
+  .option-header{
+    display: flex;
+    flex-direction: column;
+    gap:8px !important;
+    
+
+  }
+
+  .option-header > a, .option-header > button{
+    margin: 0 !important;
+    width: 100% !important;
+    display: inline-block !important;
+    
+  }
+
+  
+}
+
+@media (max-width:768px) {
+  
+  .heroe-detail-infor{
+    flex-direction: column !important;
+  }
+
+  
+
+  .pagination{
+    margin-left: 32px !important;
+    margin-right: 32px !important;
+
+  }
+}
+
+@media (max-width:600px) {
+  .header-content{
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+}
+
+
+.loading-text{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation-name: loader  ;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  color: #ef74ff;
+}
+
+@keyframes loader {
+  0%{
+    color: #ef74ff;
+  }
+  50%{
+    color: #747bff;
+  }
+  100%{
+    color: #434397;
+  }
+}
+
+.background-image-primary{  
+  background-position: center;
+  background-image:url("./assets/fondo2.jpg") ;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:  cover;
+  
+}
+
+.background-image-secondary{  
+  background-position: center;
+  background-image:url("./assets/fondo3.jpg") ;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:  cover;
+  
+}
+ 
+.filter-element{
+  margin: auto 8px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+.filter-element:nth-child(1):hover{
+  background-color: #f253b0;
+  color: #f9f9f9;
+  box-shadow:0px 2px 5px  #f253b0;
+}
+.filter-element:nth-child(2):hover{
+  background-color: #f25353;
+  color: #f9f9f9;
+  box-shadow:0px 2px 5px  #f25353;
+}
+.filter-element:nth-child(3):hover{
+  background-color: #5370f2;
+  color: #f9f9f9;
+  box-shadow:0px 2px 5px  #5370f2;
+}
+.filter-element:nth-child(4):hover{
+  background-color: #53f2b0;
+  color: #f9f9f9;
+  box-shadow:0px 2px 5px  #53f2b0;
+}
+.filter-element:nth-child(5):hover{
+  background-color: #c553f2;
+  color: #f9f9f9;
+  box-shadow:0px 2px 5px  #c553f2;
+}
+.filter-element:nth-child(6):hover{
+  background-color: #f29b53;
+  color: #f9f9f9;
+  box-shadow:0px 2px 5px  #f29b53;
+}
+
+.filter-element-selected-0{
+  background-color: #f253b0;
+}
+
+.filter-element-selected-1{
+  background-color: #f25353;
+}
+
+.filter-element-selected-2{
+  background-color: #5370f2;
+}
+
+.filter-element-selected-3{
+  background-color: #53f2b0;
+}
+
+.filter-element-selected-4{
+  background-color: #c553f2;
+}
+
+.filter-element-selected-5{
+  background-color: #f29b53;
+}
+
+
+
+.error-label-message{
+  border:  1px solid;
+  font-size: small;
+  border-radius: 4px !important;
+  background-color: #e006065b;
+  transition: 0.5s all ease;
+  opacity: 0;
+}
+
+.active{
+  animation-name: activeFrame;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  opacity: 1 !important;
+}
+
+
+
+.login-form{
+  transition: 0.3s all ease;
+}
+
+
